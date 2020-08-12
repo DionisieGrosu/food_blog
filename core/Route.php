@@ -11,7 +11,11 @@ use function preg_match;
 use function trim;
 
 /**
- * Class Router
+ * Class Route
+ *
+ * Have a couple of methods for
+ * creating routes.
+ *
  * @package core
  */
 class Route
@@ -21,12 +25,15 @@ class Route
      */
     static protected $routeArray = [];
 
-
-//    public function __construct(){
-////        self::loadController();
-//    }
-
-//    protected $postArray = [];
+    /**
+     * This method allow us to create routes
+     * and connect them with controllers and actions
+     *
+     * @param String $str
+     * @param String|null $controller
+     * @param array $params
+     * @throws wrongControllerException
+     */
     static function get(String $str, String $controller = null, Array $params = [])
     {
         if (!$controller) {
@@ -69,7 +76,6 @@ class Route
                 }
             }
 //            debug(self::$routeArray);
-            debug(self::$routeArray);
         }
 ////        $arrPath = explode('/',$str);
 //        if ($controller != false) {
@@ -144,7 +150,7 @@ class Route
                 }
             }
 //            debug(self::$routeArray);
-            debug(self::$routeArray);
+//            debug(self::$routeArray);
         }
 //        if ($controller != false) {
 //            $arrController = explode('@', $controller);

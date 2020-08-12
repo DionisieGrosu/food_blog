@@ -1,0 +1,398 @@
+@import config
+@import vars
+@import fonts
+
+//============================================================== Login Page =====================================================================
+.login-block
+  width: 100%
+  height: 100vh
+  background-repeat: none
+  background-size: cover
+  display: flex
+  align-items: center
+
+  h1
+    font-family: 'PlayFairD'
+    font-size: 26px
+
+  .form-wrap
+    padding: 20px 60px
+    width: 400px
+    text-align: center
+    margin-left: 50%
+    transform: translateX(-50%)
+    background-color: $background-form
+    color: #fff
+    border-radius: 20px
+
+    input
+      width: 80%
+      height: 33px
+      margin: 10px 0
+      border-radius: 6px
+      background-color: darken($background-form, 10%)
+      border: none
+      color: #fff
+
+    input[type='submit']
+      width: 40%
+      background-color: $button-color
+
+    label
+      i
+        font-family: 'fontawesome-webfont'
+        font-style: normal
+        width: 20%
+        height: 33px
+        font-size: 20px
+        display: inline-block
+        transform: translate(10%, 4%) !important
+        background-color: darken($background-form, 7%)
+        border-top-left-radius: 6px
+        border-bottom-left-radius: 6px
+
+      input
+        padding: 0 10px
+
+    .icon-block
+      height: 80px
+      width: 80px
+      background: url('../images/login-succes.png') no-repeat center
+      margin-left: 50%
+      transform: translateX(-50%)
+      margin-bottom: 20px
+
+//============================================================== Index Page - Top Row =====================================================================
+
+main
+  height: 100vh
+  width: 100%
+
+  .container-fluid
+    height: 100%
+    width: 100%
+
+    .top-row
+      border-bottom: 1px solid $gray-color
+
+    .logo
+      height: 80px
+
+      img
+        height: 100%
+
+    .search
+      margin-top: 23px
+      float: right
+
+      button
+        background-color: #ffffff
+        padding-bottom: 32px
+        border-radius: 15px
+        width: 30px
+        height: 30px
+
+        &::before
+          content: '\f002'
+          font-family: 'FontAwesome'
+          font-size: 20px
+
+    .user-info
+      button
+        height: 60px
+        width: 60px
+        border-radius: 30px
+        margin-top: 7%
+        background-size: cover
+
+//============================================================== Index Page - Main Content - Sidebar =====================================================================
+
+.main-content
+  .sidebar
+    padding: 0
+
+    ul
+      list-style: none
+      padding: 0
+      text-align: center
+
+      ul
+        background-color: darken(#fff, 3%)
+        display: none
+
+        a
+          &:hover
+            background-color: $accent-color
+
+      a
+        display: inline-block
+        width: 100%
+        padding: 20px 0
+
+        &:hover
+          background-color: darken(#fff, 3%)
+
+
+//============================================================== Index Page - Main Content - Main Info =====================================================================
+
+.main-info
+  .short-info
+
+  .info
+    min-height: 200px
+    margin: 30px 10px
+    border-radius: 40px
+    text-align: center
+    padding: 30px 0
+    color: #fff
+
+    h1
+      font-size: 50px
+
+    h2
+      font-family: 'PlayFairDBlack'
+      font-size: 25px
+
+  .foods
+    background-color: #ff8164
+
+  .visitors
+    background-color: #9e4db0
+
+  .subscribers
+    background-color: #cbe724
+
+  .users
+    background-color: #6ab3fc
+
+//============================================================== Index Page - Main Content - Statistics =====================================================================
+
+.statistics
+  .statistic
+  // height: 500px
+  .type-of-foods-statistic, .visitors-statistic
+    width: 99%
+    height: 100%
+    border-radius: 30px
+    border: 1px solid $gray-color
+    padding: 60px 50px
+
+    h1
+      margin-bottom: 20px
+      text-align: center
+
+    ul
+      list-style: none
+      padding: 0
+
+      h2
+        color: $font-color
+
+    .procents-block
+      height: 30px
+      border-radius: 20px
+      background-color: red
+      text-align: center
+      color: #ffffff
+      margin-bottom: 20px
+
+  .type-of-foods-statistic
+
+//============================================================== Food Page - Main Content - Food List ===================================================================== 
+
+.food-info-block
+  margin: 50px 20px
+
+  .food-info
+    width: 100%
+    margin-top: 15px
+
+    ul
+      list-style: none
+      padding: 0
+
+      a
+        display: block
+        min-height: 120px
+        border-bottom: 1px solid #000
+        background-color: $light-gray-color
+        padding: 0 20px
+
+        &:hover
+          transform: scale(1.01)
+
+        .food-foto
+          width: 50px
+          height: 50px
+          display: inline-block
+          transform: translateY(-40%)
+
+          img
+            width: 100%
+            height: 100%
+
+      .description
+        display: inline-block
+        padding: 20px 20px
+
+        h1
+          font-size: 25px
+
+        h2
+          font-size: 13px
+          color: $font-color
+
+      .delete-button
+        display: block
+        width: 50px
+        height: 50px
+        margin-top: 27px
+        border-radius: 25px
+        background-color: $btn-danger
+        z-index: 2
+        color: #fff
+
+        i
+          font-family: 'fontawesome-webfont'
+          font-size: 25px
+          font-style: normal
+
+
+.foods-list
+  .category-title
+    font-family: 'PlayFairD'
+    font-size: 20px
+    width: 100%
+    text-align: center
+
+  .categories
+    .list
+      margin-top: 20px
+      width: 100%
+      margin-left: 25%
+      padding-left: 10%
+
+      ul
+        list-style: none
+        padding: 0
+
+        li
+          // width: 80%
+          // margin-left: 25%
+
+          label
+            // margin-left: 25%
+            width: 100%
+
+          .my-checkbox
+            display: inline-block
+            width: 17px
+            height: 17px
+            border: 1px solid #000
+            border-radius: 4px
+            margin-right: 10px
+            transform: translateY(15%)
+            position: relative
+
+            &::before
+              content: '\f00c'
+              display: inline-block
+              font-size: 25px
+              position: absolute
+              transform: translate(-10%, -40%)
+              color: $link-color
+              font-family: 'fontawesome-webfont'
+              font-style: normal
+              display: none
+
+          input
+            display: none
+
+            &:checked + .my-checkbox::before
+              display: inline-block !important
+
+
+.nav-buttons
+  margin-top: 50px
+  position: relative
+
+  .active
+    background-color: #000
+    color: #fff
+    cursor: initial
+
+  .nav-buttons-wrap
+    // margin-left: 50%
+    min-width: 100%
+    text-align: center
+  // transform: translateX(-50%)
+  a
+    display: inline-block
+    width: 40px
+    height: 40px
+    margin-right: 15px
+    border: 1px solid $gray-color
+    border-radius: 20px
+    padding-top: 7px
+    text-align: center
+    color: darken($font-color, 30%)
+
+    i
+      font-family: 'fontawesome-webfont'
+      font-style: normal
+
+//============================================================== Food Page - Main Content - New User From =====================================================================
+
+.form-wrap
+  margin: 100px 0
+
+  .form
+    // min-height: 600px
+    width: 100%
+    height: 100%
+    float: right
+    background-color: $light-gray-color
+
+    form
+      width: 80%
+      margin: 50px
+      margin-left: 50%
+      transform: translateX(-50%)
+
+      input:not(.uploadedimage)
+        margin-bottom: 20px
+        display: block
+        width: 100%
+        height: 50px
+        border: 1px solid darken($light-gray-color, 15%)
+        border-radius: 8px
+        padding-left: 10px
+
+        &:focus
+          border-color: #000
+
+      .content-edit
+        margin-bottom: 20px
+        width: 100%
+        border: 1px solid darken($light-gray-color, 15%)
+        border-radius: 8px
+        padding: 10px 10px
+        min-height: 300px
+        background-color: #fff
+
+        &:focus
+          border-color: #000
+
+      input[type = 'submit']
+        font-size:
+        color: #fff
+        width: 40%
+        height: 60px
+        background-color: $link-color
+        border: none
+        border-radius: 4px
+
+      input[type = 'file']
+        margin-bottom: 25px
+        display: block
+        width: 100%

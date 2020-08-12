@@ -6,6 +6,10 @@ namespace exceptions;
 
 use Exception;
 
+/**
+ * Class wrongControllerException
+ * @package exceptions
+ */
 class wrongControllerException extends Exception
 {
 

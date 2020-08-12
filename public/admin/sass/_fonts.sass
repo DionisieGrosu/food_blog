@@ -1,0 +1,76 @@
+@mixin font($fname, $fstyle, $fweight, $furl,$ext)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		// font-display: swap // Uncomment to initially display system fonts
+		src: local($fname), url($furl) format($ext)//'woff2'
+		//src: local($fname), url($url) format()//'eot'
+		//src: local($fname), url($url) format()//'woff'
+		//src: local($fname), url($url) format()//'truetype'
+		//src: local($fname), url($url) format()//'svg'
+		//src: local($fname), url($url) format()//'opentypef'
+
+// @include font('Roboto', normal, 400, '../fonts/roboto/roboto-regular-webfont.woff2')
+// @include font('Roboto', italic, 400, '../fonts/roboto/roboto-italic-webfont.woff2')
+// @include font('Roboto', normal, 700, '../fonts/roboto/roboto-bold-webfont.woff2')
+// @include font('Roboto', italic, 700, '../fonts/roboto/roboto-bolditalic-webfont.woff2')
+@include font('fontawesome-webfont',regular,400, '../libs/fontawesome/fonts/fontawesome-webfont.woff2', 'woff2')
+
+
+//Poppins Regular
+@include font('Poppins', normal, 400, '../fonts/poppins/Poppins-Regular/Poppins-Regular.eot','eot')
+@include font('Poppins', normal, 400, '../fonts/poppins/Poppins-Regular/Poppins-Regular.otf','opentype')
+@include font('Poppins', normal, 400, '../fonts/poppins/Poppins-Regular/Poppins-Regular.svg','svg')
+@include font('Poppins', normal, 400, '../fonts/poppins/Poppins-Regular/Poppins-Regular.ttf','truetype')
+@include font('Poppins', normal, 400, '../fonts/poppins/Poppins-Regular/Poppins-Regular.woff','woff')
+@include font('Poppins', normal, 400, '../fonts/poppins/Poppins-Regular/Poppins-Regular.woff2','woff2')
+
+//Poppins Bold
+@include font('PoppinsBold', Bold, 700, '../fonts/poppins/Poppins-Bold/Poppins-Bold.eot','eot')
+@include font('PoppinsBold', Bold, 700, '../fonts/poppins/Poppins-Bold/Poppins-Bold.otf','opentype')
+@include font('PoppinsBold', Bold, 700, '../fonts/poppins/Poppins-Bold/Poppins-Bold.svg','svg')
+@include font('PoppinsBold', Bold, 700, '../fonts/poppins/Poppins-Bold/Poppins-Bold.ttf','truetype')
+@include font('PoppinsBold', Bold, 700, '../fonts/poppins/Poppins-Bold/Poppins-Bold.woff','woff')
+@include font('PoppinsBold', Bold, 700, '../fonts/poppins/Poppins-Bold/Poppins-Bold.woff2','woff2')
+
+//Poppins Black
+@include font('PoppinsBlack', Black, 500, '../fonts/poppins/Poppins-Black/Poppins-Black.eot','eot')
+@include font('PoppinsBlack', Black, 500, '../fonts/poppins/Poppins-Black/Poppins-Black.otf','opentype')
+@include font('PoppinsBlack', Black, 500, '../fonts/poppins/Poppins-Black/Poppins-Black.svg','svg')
+@include font('PoppinsBlack', Black, 500, '../fonts/poppins/Poppins-Black/Poppins-Black.ttf','truetype')
+@include font('PoppinsBlack', Black, 500, '../fonts/poppins/Poppins-Black/Poppins-Black.woff','woff')
+@include font('PoppinsBlack', Black, 500, '../fonts/poppins/Poppins-Black/Poppins-Black.woff2','woff2')
+
+
+//PlayFair_Display Regular
+@include font('PlayFairD', Regular, 400, '../fonts/playfairDisplay/PlayfairDisplay-Regular/PlayfairDisplay-Regular.eot','eot')
+@include font('PlayFairD', Regular, 400, '../fonts/playfairDisplay/PlayfairDisplay-Regular/PlayfairDisplay-Regular.otf','opentype')
+@include font('PlayFairD', Regular, 400, '../fonts/playfairDisplay/PlayfairDisplay-Regular/PlayfairDisplay-Regular.svg','svg')
+@include font('PlayFairD', Regular, 400, '../fonts/playfairDisplay/PlayfairDisplay-Regular/PlayfairDisplay-Regular.ttf','truetype')
+@include font('PlayFairD', Regular, 400, '../fonts/playfairDisplay/PlayfairDisplay-Regular/PlayfairDisplay-Regular.woff','woff')
+@include font('PlayFairD', Regular, 400, '../fonts/playfairDisplay/PlayfairDisplay-Regular/PlayfairDisplay-Regular.woff2','woff2')
+
+//PlayFair_Display Italic
+@include font('PlayFairDItalic', Regular, 400, '../fonts/playfairDisplay/PlayfairDisplay-Italic/PlayfairDisplay-Italic.eot','eot')
+@include font('PlayFairDItalic', Regular, 400, '../fonts/playfairDisplay/PlayfairDisplay-Italic/PlayfairDisplay-Italic.otf','opentype')
+@include font('PlayFairDItalic', Regular, 400, '../fonts/playfairDisplay/PlayfairDisplay-Italic/PlayfairDisplay-Italic.svg','svg')
+@include font('PlayFairDItalic', Regular, 400, '../fonts/playfairDisplay/PlayfairDisplay-Italic/PlayfairDisplay-Italic.ttf','truetype')
+@include font('PlayFairDItalic', Regular, 400, '../fonts/playfairDisplay/PlayfairDisplay-Italic/PlayfairDisplay-Italic.woff','woff')
+@include font('PlayFairDItalic', Regular, 400, '../fonts/playfairDisplay/PlayfairDisplay-Italic/PlayfairDisplay-Italic.woff2','woff2')
+
+//PlayFair_Display Bold
+@include font('PlayFairDBold', Bold, 700, '../fonts/playfairDisplay/PlayfairDisplay-Bold/PlayfairDisplay-Bold.eot','eot')
+@include font('PlayFairDBold', Bold, 700, '../fonts/playfairDisplay/PlayfairDisplay-Bold/PlayfairDisplay-Bold.otf','opentype')
+@include font('PlayFairDBold', Bold, 700, '../fonts/playfairDisplay/PlayfairDisplay-Bold/PlayfairDisplay-Bold.svg','svg')
+@include font('PlayFairDBold', Bold, 700, '../fonts/playfairDisplay/PlayfairDisplay-Bold/PlayfairDisplay-Bold.ttf','truetype')
+@include font('PlayFairDBold', Bold, 700, '../fonts/playfairDisplay/PlayfairDisplay-Bold/PlayfairDisplay-Bold.woff','woff')
+@include font('PlayFairDBold', Bold, 700, '../fonts/playfairDisplay/PlayfairDisplay-Bold/PlayfairDisplay-Bold.woff2','woff2')
+
+//PlayFair_Display Black
+@include font('PlayFairDBlack', Black, 700, '../fonts/playfairDisplay/PlayfairDisplay-Black/PlayfairDisplay-Black.eot','eot')
+@include font('PlayFairDBlack', Black, 700, '../fonts/playfairDisplay/PlayfairDisplay-Black/PlayfairDisplay-Black.otf','opentype')
+@include font('PlayFairDBlack', Black, 700, '../fonts/playfairDisplay/PlayfairDisplay-Black/PlayfairDisplay-Black.svg','svg')
+@include font('PlayFairDBlack', Black, 700, '../fonts/playfairDisplay/PlayfairDisplay-Black/PlayfairDisplay-Black.ttf','truetype')
+@include font('PlayFairDBlack', Black, 700, '../fonts/playfairDisplay/PlayfairDisplay-Black/PlayfairDisplay-Black.woff','woff')
+@include font('PlayFairDBlack', Black, 700, '../fonts/playfairDisplay/PlayfairDisplay-Black/PlayfairDisplay-Black.woff2','woff2')

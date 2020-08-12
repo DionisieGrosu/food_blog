@@ -1,0 +1,776 @@
+@import config
+@import vars
+@import fonts
+
+//------------------------------------------------------------ Main Header ------------------------------------------------------------------
+@keyframes displayHidden
+	0%
+		height: 0
+	100%
+		height: 100%
+
+
+.main-header
+    .header
+        min-height: 70px
+        padding-top: 20px
+        padding-bottom: 10px
+        .menu-button
+            width: 150px
+            float: right
+            padding-top: 10px
+            background-color: #000
+            font-size: 20px
+            // padding-bottom: 13px
+            color: lighten(#000,50% )
+            display: none
+            span
+                display: inline-block
+                transform: rotate(90deg)
+
+    .logo
+        display: block
+        width: 150px
+        height: 100%
+        background-image: url("/images/src/logo-foods.png")
+        background-size: cover
+        // background-color: red
+        // img
+        //     width: 100%
+        //     height: 100%
+    .nav
+        line-height: 48px
+        float: right
+        padding-right: 20px
+        .active
+            a
+                color: lighten(#000, 50%)
+        li
+            list-style: none
+            padding-right: 40px
+            display: inline-block
+            
+.hidden-nav-menu
+    display: none
+    margin-top: 20px
+    padding: 20px 0
+    background-color: #000
+    
+    ul
+        padding-left: 20px
+        margin-top: 10px
+        .active
+            a
+                color: #e65600
+        li
+            list-style: none
+            height: 50px
+            padding-top: 10px 
+            // margin: 20px 0
+            &:hover
+                border: 1px solid #e65600
+
+            a
+
+                display: block
+                width: 100%
+                color: #fff
+                &:hover
+                    
+                    color: #e65600
+
+
+//------------------------------------------------------------ Banner Post ------------------------------------------------------------------
+.read-more-size
+    height: 60px
+    width: 170px
+.banner-section
+    
+    .banners
+        height: 730px
+        background-color: $banner-color
+        .banner-foto
+            height: 730px
+            background-position: center
+            background-size: cover
+        .banner-info
+            position: relative
+            padding: 60px 50px
+            h1
+                font-family: 'PoppinsBlack'
+                font-size: 48px
+                border-bottom: 5px solid black
+            p
+                font-size: 16px
+                color: $banner-text-color
+                margin: 30px 0
+            a
+                // margin-top: 80px
+                position: absolute
+                bottom: 5%
+                display: block
+                background-color: $accent-color
+                @extend .read-more-size
+                color: #fff
+                padding-top: 15px
+                padding-left: 15px
+                i
+                    margin-left: 40px
+                    font-family: 'fontawesome-webfont'
+                    font-style: normal !important
+                &:hover
+                    background-color: $link-color
+
+
+.owl-dots
+    margin-top: 10px
+    text-align: center
+    .active
+        background-color: $accent-color !important
+    button
+        width: 10px
+        height: 10px
+        margin-left: 30px
+        border: 1px solid $accent-color !important
+        border-radius: 10px
+        background-color: #fff !important
+
+//------------------------------------------------------------ New Stories Section ------------------------------------------------------------------
+// .after-text-block
+//     height: 10px
+//     width: 10px
+//     background-color: $banner-color
+
+.stories-title
+    h1
+        display: inline-block
+        font-family: 'PlayFairDBlack' !important
+        font-size: 30px
+        span
+            &::after
+                content: ''
+                margin-left: 5px
+                display: inline-block
+                min-height: 9px 
+                min-width: 9px 
+                background-color: $banner-color 
+
+.stories-content
+    margin-top: 20px
+    img
+        border-radius: 10px
+        // image-orientation: center
+    // .full-food
+    //     margin-bottom: 100px
+    .full-food-foto
+        position: relative
+        margin-top: 0
+        height: 100%
+        width: 100%
+        background-size: cover
+        background-position: center
+        border-radius: 11px
+        a
+            display: block
+            float: right
+            position: absolute
+            bottom: 0
+            right: 0
+            padding-left: 30px !important
+            // margin-top: 70%
+            @extend .read-more-size
+            background-color: #ffffff
+            padding: 15px 10px
+            i
+                font-family: 'fontawesome-webfont'
+                font-style: normal 
+        .food-description
+            font-family: 'PlayFairD'
+            font-size: 40px
+            text-align: center
+            color: #fff
+            padding-top: 80%
+            padding-bottom: 30%
+    .food
+        height: 420px
+        padding-right: 30px
+        text-align: center
+        .type-food
+            &::after
+                content: ''
+                display: inline-block
+                height: 2px
+                width: 30%
+                transform: translateY(-3px)
+                margin: 0 20px
+                background-color: $font-color
+        .food-foto
+            background-position: center
+            background-size: cover
+            height: 200px
+            width: 100%
+            border-radius: 15px
+        h1
+            margin: 15px 0
+            font-size: 16px
+            font-weight: 400
+            color: $font-color
+            
+        h2
+            margin-bottom: 15px 
+            font-family: 'PlayFairDBold'
+            font-size: 20px
+        a
+            display: block
+            color: $link-color
+            margin-bottom: 15px
+            i
+                margin-left: 30px
+                font-family: 'fontawesome-webfont'
+                font-style: normal !important
+
+
+//------------------------------------------------------------ The Most Read Stories Section ------------------------------------------------------------------
+
+.most-read-stories
+    margin-top: 20px
+    // width: 100%
+.food
+    text-align: center
+    width: 100%
+    height: 500px
+    margin-bottom: 30px
+    // background-color: red
+    .food-block-wrap
+        display: block
+        width: 100%
+        height: 70%
+        overflow: hidden
+        border-radius: 10px
+        .foto-block
+            transition: all 0.6s ease
+            width: 100%
+            height: 100%
+            background-position: center
+            background-size: cover
+            // overflow: hidden
+            &:hover
+                transform: scale(1.2)
+                cursor: pointer
+    h1
+        margin: 15px 0
+        font-size: 16px
+        font-weight: 400
+        color: $font-color
+    h2
+        margin-bottom: 15px 
+        font-family: 'PlayFairDBold'
+        font-size: 20px
+    .type-food
+        &::after
+            content: ''
+            display: inline-block
+            height: 2px
+            width: 20%
+            transform: translateY(-3px)
+            margin: 0 20px
+            background-color: $font-color
+    .read-more-link
+        display: inline-block
+        color: #fff
+        background-color: $accent-color
+        width: 170px
+        height: 45px
+        padding: 8px 10px
+        border-radius: 3px
+        position: relative
+        &:hover
+            background-color: $link-color
+        i
+            font-family: 'fontawesome-webfont'
+            font-style: normal !important
+        
+//------------------------------------------------------------ Holiday Seasons Recipes Section ------------------------------------------------------------------
+.holiday-seasons-recipes
+    
+    .holiday-foods
+        padding-top: 20px
+        min-height: 600px
+        min-width: 100%
+        // background-color: red
+        .content-wrap
+            width: 100%
+            height: 600px
+            padding: 70% 10%
+        .holiday-food
+            width: 100%
+            height: 600px
+            // padding-top: 30%
+            background-position: center
+            background-size: cover
+            margin-bottom: 40px
+            position: relative
+            z-index: 1
+            border-radius: 15px
+            .background-darken-wrap
+                position: absolute
+                width: 100%
+                height: 600px
+                background-color: #000
+                opacity: 40%
+                // background-color: lighten(#000, 80%)
+                z-index: -1
+                border-radius: 15px
+            h1
+                font-size: 20px
+                color: $banner-color
+            h2
+                color: #fff
+                font-family: 'PlayFairDBold'
+                font-size: 30px
+            a[class="read-more-link"]
+                display: block
+                position: absolute
+                bottom: 0
+                right: 0
+                padding-top: 17px 
+                padding-left: 30px
+                height: 60px
+                width: 190px
+                background-color: #fff
+                i
+                    margin-left: 20px
+                    font-family: 'fontawesome-webfont'
+                    font-style: normal !important
+//------------------------------------------------------------ About Stories Section ------------------------------------------------------------------
+.about-stories
+    margin-bottom: 0
+.about-content
+    // position: relative
+    min-height: 700px
+    // width: 100%
+    // background-color: red
+    .foto-about
+        width: 100%
+        height: 100%
+        background-position: center
+        background-size: cover
+    .about-info
+        h1
+            font-family: 'PlayFairDBlack' !important
+            font-size: 30px
+        p
+            color: darken($font-color, 4%)
+    .about-wrap
+        padding: 40px 60px
+        .stories-count
+            width: 100%
+            height: 200px
+            background-color: $light-gray-color
+            padding: 60px 20px
+            text-align: center
+            margin-bottom: 20px
+            h1
+                font-size: 16px
+                color: darken($font-color, 4%)
+            p
+                font-family: 'PoppinsBold'
+                font-size: 30px
+        
+//------------------------------------------------------------ Subscribe Section ------------------------------------------------------------------
+
+.subscribe
+    position: relative
+    height: 500px
+    width: 100%
+    background-color: $light-gray-color
+    margin-bottom: 0
+    .subscribe-content-wrap
+        max-width: 70%
+        text-align: center
+        margin-top: 10%
+        margin-left: 50%
+        transform: translateX(-50%)
+    .subscribe-form
+        min-width: 50%
+        text-align: center
+        margin-top: 30px
+        margin-left: 50%
+        transform: translateX(-50%)
+        input
+            height: 60px
+        .subscribe-email
+            width: 70%
+            padding-left: 30px
+            border: none
+            border-bottom-left-radius: 10px
+            border-top-left-radius: 10px
+            background-color: darken($light-gray-color, 10%)
+            color: darken($font-color, 10%)
+        .subscribe-submit
+            display: inline-block
+            border: none
+            border-top-right-radius: 10px
+            border-bottom-right-radius: 10px
+            color: #fff
+            background-color: $accent-color
+            margin-left: -5px
+            width: 120px
+
+//------------------------------------------------------------ Footer Section ------------------------------------------------------------------
+
+.footer-section
+    color: $font-color
+    min-height: 500px
+    background-color: $footer-color
+    .title
+        font-family: 'PoppinsBold'
+        font-size: 18px
+        margin-bottom: 50px
+    .share-links
+        margin-top: 40px
+        a
+            display: inline-block
+            border-radius: 25px 
+            width: 50px
+            height: 50px
+            background-color: lighten($footer-color, 10%)
+            text-align: center
+            padding-top: 11px
+            margin-right: 15px
+            i
+                font-family: 'fontawesome-webfont'
+                font-style: normal
+                color: #fff
+                font-size: 19px
+    
+    ul
+        padding: 0 
+        list-style: none
+        li
+            margin-bottom: 15px
+    a
+        color: $font-color
+    .footer-content
+        margin-top: 8%
+        p
+            max-width: 80%
+        .title
+            color: #fff
+    .questions
+        ul
+            li
+                i
+                    font-family: 'fontawesome-webfont'
+                    font-style: normal
+                    color: #fff
+                    font-size: 19px
+                    margin-right: 25px
+                    position: absolute
+                p
+                    display: inline-block
+                    margin-left: 40px
+
+//------------------------------------------------------------ Page About - section About Us ------------------------------------------------------------------
+.about-us-section
+    position: relative
+    height: 500px
+    margin: 0
+    background-position: 40% 60%
+    background-repeat: no-repeat
+    background-size: cover
+    color: #fff
+    z-index: 1
+    .about-us-content
+        margin-top: 250px
+        width: 100%
+        text-align: center 
+        h1
+            font-family: 'PlayFairD'
+            font-size: 50px
+        h2
+            font-size: 17px
+            color: $font-color
+            a
+                color: #fff
+                &:hover
+                    color: $link-color
+            i
+                font-family: 'fontawesome-webfont'
+                font-style: normal
+                font-size: 12px
+                margin-right: 10px
+    .about-background-darken
+        position: absolute
+        display: block
+        z-index: -1
+        width: 100%
+        height: 100%
+        background-color: black
+        opacity: 40%
+        
+
+
+//------------------------------------------------------------ Page Foods - section Foods List ------------------------------------------------------------------
+
+.foods-list
+    margin-top: 120px
+    .category-title
+        font-family: 'PlayFairD'
+        font-size: 20px
+        width: 100%
+        text-align: center
+    .categories
+        .list
+            margin-top: 20px
+            width: 100%
+            ul
+                // padding-left: 10%
+                li
+                    width: 80%
+                    // margin-left: 25%
+                
+                    label
+                        margin-left: 25%
+                        width: 100%
+                    .my-checkbox
+                        display: inline-block
+                        width: 17px
+                        height: 17px
+                        border: 1px solid #000
+                        border-radius: 4px
+                        margin-right: 10px
+                        transform: translateY(15%)
+                        position: relative
+                        &::before
+                            content: '\f00c'
+                            display: inline-block
+                            font-size: 25px
+                            position: absolute
+                            transform: translate(-10%, -40%)
+                            color: $link-color
+                            font-family: 'fontawesome-webfont'
+                            font-style: normal
+                            display: none
+                    input
+                        display: none
+                        &:checked + .my-checkbox::before
+                            display: inline-block !important
+    .nav-buttons
+        margin-top: 50px
+        position: relative
+        
+        .active
+            background-color: #000
+            color: #fff
+            cursor: initial
+
+        .nav-buttons-wrap
+            // margin-left: 50%
+            min-width: 100%
+            text-align: center
+            // transform: translateX(-50%)
+        a
+            display: inline-block
+            width: 40px
+            height: 40px
+            margin-right: 15px
+            border: 1px solid $gray-color
+            border-radius: 20px
+            padding-top: 7px
+            text-align: center
+            color: darken($font-color, 30% )
+            i
+                font-family: 'fontawesome-webfont'
+                font-style: normal
+                       
+    .category-list
+        list-style: none
+        font-size: 19px
+    
+    .foods-filter
+        text-align: center
+        display: none
+        width: 60px
+        height: 60px
+        border-radius: 30px
+        background-color: lighten($gray-color, 30% )
+        padding-top: 2px
+        position: absolute
+        right: 40px
+        top: -80px
+        i
+            font-family: 'fontawesome-webfont'
+            font-style: normal
+            font-size: 23px
+    .filter-wrap
+        .active
+            height: 270px !important
+    .filter-list
+        display: none
+        border: 2px solid $gray-color
+        border-radius: 20px
+        margin-bottom: 20px
+        height: 0
+        overflow: hidden
+        visibility: hidden
+        transition: all 0.5s ease
+        .list
+            li
+                margin-left: 0 
+
+//------------------------------------------------------------ Contact Us page - Contact Us section  ------------------------------------------------------------------
+
+.contact-us-section
+    .contact
+        margin: 100px 0
+    .contact-form
+        // min-height: 600px
+        width: 90%
+        height: 100%
+        float: right
+        background-color: $light-gray-color
+        form
+            width: 80%
+            margin: 50px
+            margin-left: 50%
+            transform: translateX(-50%)
+            input
+                margin-bottom: 20px
+                display: block
+                width: 100%
+                height: 50px
+                border: 1px solid darken($light-gray-color,15% )
+                border-radius: 8px
+                padding-left: 10px
+                &:focus
+                    border-color: #000
+            textarea
+                margin-bottom: 20px
+                width: 100%
+                border: 1px solid darken($light-gray-color,15% )
+                border-radius: 8px
+                padding: 10px 10px 
+                &:focus
+                    border-color: #000
+            input[type = 'submit']
+                font-size: 
+                color: #fff
+                width: 40%
+                height: 60px
+                background-color: $link-color
+                border: none
+                border-radius: 4px 
+
+//------------------------------------------------------------ Food Recipe page - Food Recipe section  ------------------------------------------------------------------
+.foods-recipe
+    margin-top: 70px
+    .recent-foods
+        display: block
+    h1
+        font-family: 'PlayFairD'
+        font-weight: 500
+        font-size: 30px
+    .recent-foods-title
+        h1
+            font-family: 'PlayFairDBlack'
+            font-size: 30px
+            margin-bottom: 40px
+    .recent-foods-list
+        ul
+            list-style: none
+            padding: 0
+            li
+                font-size: 18px
+                img
+                    width: 90%
+                    height: 50%
+                a:hover
+                    color: $link-color
+            .recent-food-info
+                padding: 0
+            .food-created-info
+                font-size: 13px
+                color: $gray-color
+                span
+                    margin-right: 3px
+                i
+                    font-family: 'fontawesome-webfont'
+                    font-style: normal 
+                    margin-right: 3px
+    .food-recipe
+        p
+            color: darken($font-color, 15%)
+        img
+            margin: 40px 0
+            width: 100%
+
+//------------------------------------------------------------ Food Recipe page - Comments section  ------------------------------------------------------------------
+
+.comments-section
+    .comments
+        margin-bottom: 50px
+        .comments-title
+            font-family: 'PlayFairD'
+            font-size: 30px
+            font-weight: 400
+    ul
+        list-style: none
+        margin-top: 40px
+        h1
+            font-family: 'PlayFairD'
+            font-weight: 400
+        h2
+            font-size: 14px
+            color: darken($text-color, 20%)
+        p
+            color: darken($text-color, 10%)
+        .comment-image-wrap
+            padding-left: 0
+            text-align: center
+            .comment-image
+                display: inline-block
+                width: 70px
+                height: 70px
+                border-radius: 35px
+                float: 0
+                background-image: url("../images/src/person_1.jpg")
+                background-size: cover
+    .leave-comment
+        h1
+            font-family: 'PlayFairD'
+            font-size: 30px
+            font-weight: 400
+            
+        .comment-form
+            background-color: $light-gray-color
+            padding: 60px 60px
+            margin-top: 30px
+            label
+                color: $gray-color
+            input
+                margin-bottom: 10px
+                display: block
+                width: 100%
+                height: 50px
+                border: 1px solid darken($light-gray-color,15% )
+                border-radius: 8px
+                padding-left: 10px
+                &:focus
+                    border-color: #000
+            textarea
+                margin-bottom: 20px
+                width: 100%
+                border: 1px solid darken($light-gray-color,15% )
+                border-radius: 8px
+                padding: 10px 10px 
+                &:focus
+                    border-color: #000
+            input[type = 'submit']
+                font-size: 
+                color: #fff
+                width: 40%
+                height: 60px
+                background-color: $link-color
+                border: none
+                border-radius: 4px 

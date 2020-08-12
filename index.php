@@ -5,7 +5,7 @@ require 'core/Dev.php';
 use exceptions\wrongControllerException;
 
 require 'core/Router.php';
-require 'Controllers/Controller.php';
+require 'core/Controller.php';
 require 'Controllers/MainController.php';
 
 
@@ -50,7 +50,6 @@ require 'Controllers/MainController.php';
 //spl_autoload_register('autoloadModels');
 //spl_autoload_register('autoloadCore');
 spl_autoload_register(function ($fileName) {
-    echo $fileName;
     if (file_exists($fileName . '.php')) {
         require $fileName . '.php';
     }
