@@ -2,6 +2,7 @@
 
 require 'core/Dev.php';
 
+use core\Model;
 use exceptions\wrongControllerException;
 
 require 'core/Router.php';
@@ -64,11 +65,36 @@ spl_autoload_register(function ($fileName) {
 //$router->loadController();
 try {
     $router = new core\Router();
-    $router->loadController();
+//    $router->loadController();
 //    throw new wrongControllerException();
 //    $contr = new Controller();
 } catch (Exception $e) {
-    $e->show();
+//    $e->show();
 //    echo $e->getTraceAsString();
 }
+
+//if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+//    echo 'Post';
+//}
+
+//debug($_SERVER);
+
+
+if (isset($_SERVER['HTTP_X_REQUESTED_WITH'])
+    && $_SERVER['HTTP_X_REQUESTED_WITH'] == "XMLHttpRequest") {
+    echo 'TRUE';
+}
+//echo 'TRUE';
+
+$model = new Model();
+$model->ret();
+?>
+<!---->
+<!--<form action="/" method="post">-->
+<!--    <input type="text" name="text">-->
+<!--    <button type="submit">button</button>-->
+<!--</form>-->
+<!--<script src="public/admin/libs/jquery/dist/jquery.js"></script>-->
+<!--<script src="main.js"></script>-->
+
 

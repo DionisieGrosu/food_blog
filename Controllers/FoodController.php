@@ -25,12 +25,31 @@ class FoodController extends Controller
      */
     public function index(Request $request = null)
     {
-        $arr = $request->get(['page']);
-        $this->view->render('foods:index');
+        if ($request != null) {
+            $arr = $request->get(['page']);
+        }
+
+//        debug($request->get());
+        $this->view->render('admin.index');
 //        echo readdir('views/admin/lauouts');
 //        opendir('views/admin/lauouts/index.php');
 //        debug(readdir(opendir('views/admin/layouts')));
 //        debug(scandir('views/admin/'));
 //        opendir('views/admin/layouts');
+    }
+
+    public function foods(Request $request = null)
+    {
+        $this->view->render('admin.foods');
+    }
+
+    public function login(Request $request = null)
+    {
+        $this->view->render('admin.login');
+    }
+
+    public function users(Request $request = null)
+    {
+        $this->view->render('admin.users');
     }
 }

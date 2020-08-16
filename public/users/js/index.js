@@ -28,6 +28,34 @@ const backgroundDarkenHolidayFoods = document.querySelectorAll('.background-dark
 const navButtonPreventDefault = document.querySelector('.nav-buttons>.nav-buttons-wrap>.active')
 const filterButton = document.querySelector('.foods-filter') // filter button
 const filterList = document.querySelector('.filter-list') // filter list
+const navElem = document.querySelectorAll('.nav-elem') // Nav element
+const navHiddenElem = document.querySelectorAll('.nav-hidden-elem') // Nav hidden elements
+// console.log(navElem)
+
+function addActiveClassForNav(navElem) {
+    navElem.forEach((elem, index) => {
+        console.log(elem.firstChild.innerHTML)
+        if (window.location.pathname == '/') {
+            if (elem.firstChild.innerHTML.toLowerCase() == 'home') {
+                elem.className += ' active';
+                navHiddenElem[index].className += ' active'
+                console.log(elem.firstChild.innerHTML.toLowerCase())
+            }
+        } else {
+            srcInner = elem.firstChild.innerHTML.toLowerCase();
+            pathName = window.location.pathname.substr(1);
+
+            if (pathName.match(srcInner)) {
+
+                elem.className += ' active';
+                navHiddenElem[index].className += ' active'
+            }
+        }
+    })
+}
+
+addActiveClassForNav(navElem)
+
 
 //Button Event Listener for Nav Menu
 menuButton.addEventListener("click", (event) => {
@@ -35,7 +63,7 @@ menuButton.addEventListener("click", (event) => {
         hiddenNavMenu.className = hiddenNavMenu.className.match("hidden-nav-menu")
         hiddenNavMenu.style.transform = 'translateY(-100%)'
         bannerPost.style.top = "90px"
-            // hiddenNavMenu.style.animation = "displayHidden 6s ease reverse"
+        // hiddenNavMenu.style.animation = "displayHidden 6s ease reverse"
 
     } else {
         hiddenNavMenu.className = hiddenNavMenu.className + " nav-active"
@@ -62,6 +90,7 @@ function bannersTextCut(element) {
     })
 
 }
+
 console.log(window.innerWidth)
 
 bannersTextCut(bannerDescriptionText)
@@ -76,16 +105,16 @@ function bannerButtonControl(element) {
                 let tempIndex
                 bannerWrap.forEach((banner, i) => {
 
-                        if (banner.className.match('banner-display')) {
-                            tempIndex = i
-                            banner.className = 'banner-wrap'
+                    if (banner.className.match('banner-display')) {
+                        tempIndex = i
+                        banner.className = 'banner-wrap'
 
-                        }
-                    })
-                    // console.log(bannerWrap[tempIndex + 1].className)
+                    }
+                })
+                // console.log(bannerWrap[tempIndex + 1].className)
                 if (bannerWrap[tempIndex + 1] == undefined) {
                     tempIndex = 0
-                        // bannerWrap[tempIndex].style.opacity = "1"
+                    // bannerWrap[tempIndex].style.opacity = "1"
                     bannerWrap[tempIndex].className += ' banner-display'
 
                     // bannerWrap[tempIndex].style.visibility = "visible"
@@ -103,23 +132,23 @@ function bannerButtonControl(element) {
                 let tempIndex
                 bannerWrap.forEach((banner, i) => {
 
-                        if (banner.className.match('banner-display')) {
-                            tempIndex = i
-                            banner.className = 'banner-wrap'
-                                // banner.style.transition = 'visibility 0.5s ease-out'
-                                // banner.style.visibility = "hidden"
-                        }
-                    })
-                    // console.log(bannerWrap[tempIndex + 1].className)
+                    if (banner.className.match('banner-display')) {
+                        tempIndex = i
+                        banner.className = 'banner-wrap'
+                        // banner.style.transition = 'visibility 0.5s ease-out'
+                        // banner.style.visibility = "hidden"
+                    }
+                })
+                // console.log(bannerWrap[tempIndex + 1].className)
                 if (bannerWrap[tempIndex - 1] == undefined) {
                     tempIndex = bannerWrap.length - 1
                     bannerWrap[tempIndex].className += ' banner-display'
-                        // bannerWrap[tempIndex].style.transition = 'visibility 0.5s ease-in'
-                        // bannerWrap[tempIndex].style.visibility = "visible"
+                    // bannerWrap[tempIndex].style.transition = 'visibility 0.5s ease-in'
+                    // bannerWrap[tempIndex].style.visibility = "visible"
                 } else {
                     bannerWrap[--tempIndex].className += ' banner-display'
-                        // bannerWrap[tempIndex].style.transition = 'visibility 0.5s ease-in'
-                        // bannerWrap[tempIndex].style.visibility = "visible"
+                    // bannerWrap[tempIndex].style.transition = 'visibility 0.5s ease-in'
+                    // bannerWrap[tempIndex].style.visibility = "visible"
                 }
 
             }
@@ -139,6 +168,7 @@ function crossPlatformFunction() {
     }
     console.log(navigator.vendor)
 }
+
 crossPlatformFunction()
 
 if (navButtonPreventDefault != undefined) {
@@ -159,3 +189,4 @@ if (filterButton != undefined) {
         }
     })
 }
+

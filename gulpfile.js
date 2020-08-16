@@ -16,15 +16,15 @@ const fileswatch = 'html,htm,txt,json,md,woff2';
 
 
 function styles() {
-    return src('public/admin/sass/main.sass')
+    return src('public/users/sass/main.sass')
         .pipe(eval('sass')())
-        .pipe(concat('public.min.css'))
+        .pipe(concat('app.min.css'))
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 15 versions', '> 1%', 'ie 8', 'ie 7', "android >= 4"],
             grid: true
         }))
         .pipe(cleancss({level: {1: {specialComments: 0}}, /* format: 'beautify' */}))
-        .pipe(dest('public/admin/css'))
+        .pipe(dest('public/users/css'))
         .pipe(browserSync.stream())
 }
 
@@ -35,11 +35,11 @@ function scripts() {
         // // 'public/admin/js/libs.js',
         // 'public/admin/libs/jquery/dist/jquery.js',
         // 'public/admin/libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js',
-        'public/admin/js/index.js'
+        'public/users/js/index.js'
     )
-        .pipe(concat('public.min.js'))
+        .pipe(concat('app.min.js'))
         .pipe(uglify())
-        .pipe(dest('public/admin/js'))
+        .pipe(dest('public/users/js'))
         .pipe(browserSync.stream())
 }
 
@@ -48,14 +48,14 @@ function libsJS() {
         // 'public/admin/libs/jquery/dist/jquery.js',
         // 'public/admin/libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js',
         // 'public/admin/js/libs.js',
-        'public/admin/libs/jquery/dist/jquery.js',
-        'public/admin/libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js',
+        'public/users/libs/jquery/dist/jquery.js',
+        'public/users/libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js',
         // 'public/admin/libs/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.js',
         // 'public/admin/libs/slick-1.8.1/slick/slick.js'
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
-        .pipe(dest('public/admin/js'))
+        .pipe(dest('public/users/js'))
 }
 
 function browsersync() {
@@ -69,21 +69,21 @@ function browsersync() {
 
 
 function images() {
-    return src('public/admin/images/src/**/*')
-        .pipe(newer('public/admin/images/dist/'))
+    return src('public/users/images/src/**/*')
+        .pipe(newer('public/users/images/dist/'))
         .pipe(imagemin())
-        .pipe(dest('public/admin/images/dist/'))
+        .pipe(dest('public/users/images/dist/'))
 }
 
 function cleanimg() {
-    return del('public/admin/images/dist/**/*', {force: true})
+    return del('public/users/images/dist/**/*', {force: true})
 }
 
 function startwatch() {
-    watch('public/admin/sass/**/*.sass', styles);
-    watch('public/admin/images/src/**/*.{' + imageswatch + '}', images);
+    watch('public/users/sass/**/*.sass', styles);
+    watch('public/users/images/src/**/*.{' + imageswatch + '}', images);
     watch('public/**/*.{' + fileswatch + '}').on('change', browserSync.reload);
-    watch('public/admin/js/**/*.js').on('change', scripts);
+    watch('public/users/js/**/*.js').on('change', scripts);
 }
 
 
